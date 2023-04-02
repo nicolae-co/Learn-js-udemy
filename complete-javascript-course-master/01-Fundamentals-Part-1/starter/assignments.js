@@ -3,7 +3,7 @@
 
 const country = "Romania";
 const continent = "Europe";
-let population = 19000000;
+let population = 19;
 
 //console.log(country, continent, population);
 
@@ -32,10 +32,10 @@ let halfPopulation = population / 2;
 population++;
 //console.log(population);
 
-let populationFinland = 6000000;
+let populationFinland = 6;
 //console.log(population > populationFinland);
 
-let avgPopulation = 33000000;
+let avgPopulation = 33;
 //console.log(avgPopulation > population);
 
 const description = country + ' is in ' + continent + ' ,and its '
@@ -45,11 +45,25 @@ const description = country + ' is in ' + continent + ' ,and its '
 
 // String and Template Literals
 
-
+const description2 = `${country} is in ${continent}, and its ${population} million people speak ${language}`
+//console.log(description2)
 // Taking Decisions: if / else Statements
 
 
+if (population > avgPopulation) {
+    //console.log(`${country} is above average.`)
+} else {
+    //console.log(`${country}'s population is ${avgPopulation - population} millions below average.`)
+}
+
 // Type Conversion and Coercion
+/*
+'9' - '5' = 4;
+'19' - '13' + '17' = '617';
+'19' - '13' + 17 = 23;
+'123' < 57 = false;
+5 + 6 + '4' + 9 - 4 - 2 = 1143
+*/
 
 
 // Equality Operators: == vs ===
