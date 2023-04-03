@@ -136,7 +136,7 @@ console.log(century)
 
 
 
-// Type Conversion 
+// Type Conversion
 
 const inputYear = '1991';
 console.log(Number(inputYear), inputYear);
@@ -160,7 +160,6 @@ let n = '1' + 1;
 n = n - 1;
 console.log(n);
 
-*/
 
 //
 
@@ -184,4 +183,58 @@ if (height) {
     console.log("YAY! Height is defined!")
 } else {
     console.log('Height is UNDEFINED')
+}
+
+
+
+// Equality Operators: == vs ===
+
+const age = 18;
+if (age === 18) console.log('You just become an adult! (strict)');
+
+if (age == 18) console.log('You just become an adult! (loose)');
+
+const favourite = Number(prompt("What's your favourite number?"));
+console.log(favourite);
+console.log(typeof favourite);
+
+if (favourite === 23) { //'23' ==  23
+    console.log('Cool! 23 is an amazing number!');
+} else if (favourite === 7) {
+    console.log('7 is also a cool number!');
+} else if (favourite === 9) {
+    console.log('9 is also a cool number!');
+} else {
+    console.log('Number is not 23, 7 or 9!'); 7
+}
+
+if (favourite !== 23) console.log('Why not 23?');
+
+*/
+
+// Boolean Logic
+// Logical Operators
+
+const hasDriversLicence = true;  // A
+const hasGoodVision = true;      // B
+
+console.log(hasDriversLicence && hasGoodVision);
+console.log(hasDriversLicence || hasGoodVision);
+console.log(!hasDriversLicence);
+
+
+// if (shouldDrive) {
+//     console.log('Sarah is able to drive!');
+// } else {
+//     console.log('Someone else should drive...');
+// }
+
+const isTired = false; // C
+
+console.log(hasDriversLicence && hasGoodVision && isTired);
+
+if (hasDriversLicence && hasGoodVision && !isTired) {
+    console.log('Sarah is able to drive!');
+} else {
+    console.log('Someone else should drive...');
 }
