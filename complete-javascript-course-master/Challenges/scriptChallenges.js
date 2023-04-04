@@ -41,3 +41,47 @@ if (bmiMark2 > bmiJohn2) {
 } else {
     console.log(`John's BMI (${bmiJohn2}) is higher than Mark's BMI (${bmiMark2})`)
 }
+
+// Coding Challenge #3
+
+const dolphins1 = 96;
+const dolphins2 = 108;
+const dolphins3 = 89;
+
+const koalas1 = 88;
+const koalas2 = 91;
+const koalas3 = 110;
+
+const avgDolphins = (dolphins1 + dolphins2 + dolphins3) / 3;
+const avgKoalas = (koalas1 + koalas2 + koalas3) / 3;
+
+if (avgDolphins > avgKoalas) {
+    console.log('Dolphins won!');
+} else if (avgDolphins < avgKoalas) {
+    console.log('Koalas won!');
+} else {
+    console.log('Draw!');
+}
+
+// BONUS 
+
+const dolphins1bonus = 97;    //bonus 1 97
+const dolphins2bonus = 112;   //bonus 1 112
+const dolphins3bonus = 101;   //bonus 1 101
+
+const koalas1bonus = 109;     //bonus 1 109
+const koalas2bonus = 95;      //bonus 1 95 
+const koalas3bonus = 106;     //bonus 1 123
+
+const avgDolphinsbonus = (dolphins1bonus + dolphins2bonus + dolphins3bonus) / 3;
+const avgKoalasbonus = (koalas1bonus + koalas2bonus + koalas3bonus) / 3;
+
+if (avgDolphinsbonus >= 100 && avgDolphinsbonus > avgKoalasbonus) {
+    console.log('Dolphins won!');
+} else if (avgKoalasbonus >= 100 && avgDolphinsbonus < avgKoalasbonus) {
+    console.log('Koalas won!');
+} else if (avgDolphinsbonus >= 100 && avgKoalasbonus >= 100 && avgDolphinsbonus === avgKoalasbonus) {
+    console.log('Draw!');
+} else {
+    console.log('No one won!')
+}
