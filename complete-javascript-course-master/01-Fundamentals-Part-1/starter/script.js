@@ -238,7 +238,7 @@ if (hasDriversLicence && hasGoodVision && !isTired) {
     console.log('Someone else should drive...');
 }
 
-*/
+
 
 // The switch Statement
 
@@ -267,3 +267,53 @@ switch (day) {
     default:
         console.log('Not a valid day!')
 }
+
+if (day === 'monday') {
+    console.log('Plan course structure');
+    console.log('Go to coding meetup');
+} else if (day === 'tuesday') {
+    console.log('Preapare theory videos');
+} else if (day === 'wednesday' || day === 'thursday') {
+    console.log('Write code examples');
+} else if (day === 'friday') {
+    console.log('Record videos');
+} else if (day === 'saturday' || day === 'sunday') {
+    console.log('Enjoy the weekend :D');
+} else {
+    console.log('Not a valid day!')
+}
+
+
+// Statements vs Expressions
+
+//expressions produces value
+3 + 4
+1991
+true && false && !false
+//statements does NOT produce a value on himself
+if (23 > 10) {
+    const str = '23 is bigger';
+}
+
+*/
+
+
+// The Conditional (Ternary) Operator
+
+const age = 15;
+// age >= 18
+//     ? console.log('I like to drink wine🍷')
+//     : console.log('I like to drink juice🥤');
+
+const drink = age >= 18 ? 'wine🍷' : 'juice🥤';
+console.log(`1 - I like to drink ${drink}`)
+
+let drink2;
+if (age >= 18) {
+    drink2 = 'wine🍷';
+} else {
+    drink2 = 'juice🥤';
+}
+console.log(`2 - I like to drink ${drink2}`)
+
+console.log(`3 - I like to drink ${age >= 18 ? 'wine🍷' : 'juice🥤'}`);

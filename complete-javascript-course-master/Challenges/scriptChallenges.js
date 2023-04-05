@@ -85,3 +85,13 @@ if (avgDolphinsbonus >= 100 && avgDolphinsbonus > avgKoalasbonus) {
 } else {
     console.log('No one won!')
 }
+
+
+// Coding Challenge #4
+const bill = 275;
+const tip = bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+console.log(`
+Bill value: ${bill}
+Tip value: ${tip}
+Total value: ${bill + tip}
+`);
