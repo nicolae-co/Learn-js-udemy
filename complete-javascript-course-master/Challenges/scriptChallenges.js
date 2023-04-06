@@ -1,6 +1,6 @@
 
 // JavaScript Fundamentals - Part 1
-// Coding Challenge #1
+// Coding Challenge #1 
 
 const massMark1 = 78;
 const heightMark1 = 1.69;
@@ -95,3 +95,6 @@ Bill value: ${bill}
 Tip value: ${tip}
 Total value: ${bill + tip}
 `);
+
+
+// JavaScript Fundamentals - Part 2
