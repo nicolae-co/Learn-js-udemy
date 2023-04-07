@@ -23,7 +23,7 @@ const population1 = percentageOfWorld1(54);
 const population2 = percentageOfWorld1(523);
 const population3 = percentageOfWorld1(1302);
 
-console.log(population1, population2, population3);
+//console.log(population1, population2, population3);
 
 const percentageOfWorld2 = function (population) {
     return `${(population / 79).toFixed(2)}% of world population`
@@ -33,4 +33,41 @@ const population4 = percentageOfWorld2(234);
 const population5 = percentageOfWorld2(24);
 const population6 = percentageOfWorld2(987);
 
-console.log(population4, population5, population6);
+//console.log(population4, population5, population6);
+
+
+// Arrow Functions
+
+const percentageOfWorld3 = population => (population / 79).toFixed(2)
+
+const population7 = percentageOfWorld2(653);
+const population8 = percentageOfWorld2(3425);
+const population9 = percentageOfWorld2(132);
+
+//console.log(population7, population8, population9);
+
+
+//Functions Calling Other Functions
+
+function describePopulation(country, population) {
+    return `${country} has ${population} million people, which is about ${percentageOfWorld3(population)}% of the world.`
+}
+
+const population10 = describePopulation('England', 53);
+const population11 = describePopulation('China', 123);
+const population12 = describePopulation('India', 763);
+
+//console.log(population10, population11, population12);
+
+
+// Introduction to Arrays
+
+const populations = [34, 65, 76, 87];
+//console.log(population1.length === 4);
+const percentages = [
+    percentageOfWorld1(populations[0]),
+    percentageOfWorld1(populations[1]),
+    percentageOfWorld1(populations[2]),
+    percentageOfWorld1(populations[3])
+];
+//console.log(percentages);

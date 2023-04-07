@@ -98,3 +98,46 @@ Total value: ${bill + tip}
 
 
 // JavaScript Fundamentals - Part 2
+
+// Coding Challenge #1
+
+const calcAverage = (a, b, c) => (a + b + c) / 3;
+
+//Test 1
+let averageDolphins = calcAverage(44, 23, 71);
+let averageKoalas = calcAverage(65, 54, 49);
+
+function checkWinner(avgDolphins, avgKoalas) {
+    if (avgDolphins >= avgKoalas * 2) {
+        console.log(`Dolphins win (${avgDolphins} vs. ${avgKoalas})`)
+    } else if (avgKoalas >= avgDolphins * 2) {
+        console.log(`Koalas win (${avgKoalas} vs. ${avgDolphins})`)
+    } else {
+        console.log('No one won!')
+    }
+}
+
+checkWinner(averageDolphins, averageKoalas);
+
+//Test 2
+averageDolphins = calcAverage(85, 54, 41);
+averageKoalas = calcAverage(23, 34, 27);
+
+checkWinner(averageDolphins, averageKoalas);
+
+
+// Coding Challenge #2
+
+const calcTip = function (bill) {
+    return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+}
+
+console.log(calcTip(100));
+
+const bills = [125, 555, 44];
+const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
+const total = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
+
+console.log(bills);
+console.log(tips);
+console.log(total);
