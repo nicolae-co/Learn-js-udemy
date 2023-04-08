@@ -170,7 +170,7 @@ const ages = [calcAge(years[0]), calcAge(years[1]), calcAge(years[years.length -
 
 console.log(ages);
 
-*/
+
 
 // Basic Array Operations (Methods)
 
@@ -211,3 +211,40 @@ console.log(friends.includes('23'));
 if (friends.includes('Steven')) {
     console.log('You have a friend called Steven');
 }
+
+*/
+// Introduction to Objects
+
+const jonasArray = [
+    'Jonas',
+    'Schmedtmann',
+    2037 - 1991,
+    'teacher',
+    ['Michael', 'Peter', 'Steven']
+]
+
+const jonas = {
+    firstName: 'Jonas',
+    lastName: 'Schmedtmann',
+    age: 2037 - 1991,
+    job: 'teacher',
+    friends: ['Michael', 'Peter', 'Steven']
+}
+
+
+
+// Dot vs. Bracket Notation
+
+console.log(jonas);
+
+// Dot notation
+console.log(jonas.lastName);
+//Brackets notation
+console.log(jonas['lastName']);
+
+const nameKey = 'Name';
+console.log(jonas['first' + nameKey]);
+console.log(jonas['last' + nameKey]);
+
+const interetedIn = prompt('What do you want to know about Jonas? Choose between firstName, lastName, age, job and friends');
+console.log(jonas[interetedIn]);
