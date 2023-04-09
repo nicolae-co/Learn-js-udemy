@@ -1,6 +1,8 @@
 
 // JavaScript Fundamentals - Part 1
 // Coding Challenge #1 
+console.log('Fundamentals Part 1 - Challenge #1')
+
 
 const massMark1 = 78;
 const heightMark1 = 1.69;
@@ -29,6 +31,7 @@ console.log(bmiMark2, bmiJohn2)
 console.log(markHigherBMI2);
 
 // Coding Challenge #2
+console.log('Fundamentals Part 1 - Challenge #2')
 
 if (bmiMark1 > bmiJohn1) {
     console.log(`Mark's BMI (${bmiMark1}) is higher than John's BMI (${bmiJohn1})`)
@@ -43,6 +46,7 @@ if (bmiMark2 > bmiJohn2) {
 }
 
 // Coding Challenge #3
+console.log('Fundamentals Part 1 - Challenge #3')
 
 const dolphins1 = 96;
 const dolphins2 = 108;
@@ -88,6 +92,8 @@ if (avgDolphinsbonus >= 100 && avgDolphinsbonus > avgKoalasbonus) {
 
 
 // Coding Challenge #4
+console.log('Fundamentals Part 1 - Challenge #4')
+
 const bill = 275;
 const tip = bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
 console.log(`
@@ -100,6 +106,7 @@ Total value: ${bill + tip}
 // JavaScript Fundamentals - Part 2
 
 // Coding Challenge #1
+console.log('Fundamentals Part 2 - Challenge #1')
 
 const calcAverage = (a, b, c) => (a + b + c) / 3;
 
@@ -127,6 +134,8 @@ checkWinner(averageDolphins, averageKoalas);
 
 
 // Coding Challenge #2
+console.log('Fundamentals Part 2 - Challenge #2')
+
 
 const calcTip = function (bill) {
     return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
@@ -141,3 +150,38 @@ const total = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
 console.log(bills);
 console.log(tips);
 console.log(total);
+
+
+// Coding Challenge #3
+console.log('Fundamentals Part 2 - Challenge #3')
+
+
+const mark = {
+    firstName: 'Mark',
+    lastName: 'Miller',
+    mass: 78,
+    height: 1.69,
+    calcBMI: function () {
+        this.bmi = (this.mass / this.height ** 2).toFixed(1);
+        return this.bmi;
+    }
+}
+
+const john = {
+    firstName: 'John',
+    lastName: 'Smith',
+    mass: 92,
+    height: 1.95,
+    calcBMI: function () {
+        this.bmi = (this.mass / this.height ** 2).toFixed(1);
+        return this.bmi;
+    }
+}
+
+if (john.calcBMI() > mark.calcBMI()) {
+    console.log(`${john.firstName} ${john.lastName}'s BMI (${john.bmi}) is higher than ${mark.firstName} ${mark.lastName}'s BMI (${mark.bmi})`)
+} else if (john.calcBMI() < mark.calcBMI()) {
+    console.log(`${mark.firstName} ${mark.lastName}'s BMI (${mark.bmi}) is higher than ${john.firstName} ${john.lastName}'s BMI (${john.bmi})`)
+} else {
+    console.log("Equal BMI's")
+}
