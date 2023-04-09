@@ -71,3 +71,37 @@ const percentages = [
     percentageOfWorld1(populations[3])
 ];
 //console.log(percentages);
+
+
+
+
+// Basic Array Operations (Methods)
+const neighbours = ['Moldova', 'Bulgaria', 'Ukraina', 'Ungaria', 'Serbia'];
+
+neighbours.push('Utopia');
+neighbours.pop('Utopia');
+if (!neighbours.includes('Germany')) {
+    //console.log('Probably not a central European country :D')
+}
+
+neighbours[neighbours.indexOf('Moldova')] = 'Republic of Moldova';
+//console.log(neighbours);
+
+
+
+
+// Introduction to Objects
+
+const myCountry = {
+    country: 'Romania',
+    capital: 'Bucharest',
+    language: 'romanian',
+    population: 19,
+    neighbours: ['Moldova', 'Bulgaria', 'Ukraina', 'Ungaria', 'Serbia']
+}
+
+
+
+// Dot vs. Bracket Notation
+
+console.log(`${myCountry.country} has ${myCountry.population} million ${myCountry.language}-speaking people, ${myCountry.neighbours.length} neighbouring countries and a capital called ${myCountry.capital}.`)
