@@ -185,3 +185,28 @@ if (john.calcBMI() > mark.calcBMI()) {
 } else {
     console.log("Equal BMI's")
 }
+
+
+// Coding Challenge #4
+
+const bills2 = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+const tips2 = [];
+const total2 = [];
+
+for (let i = 0; i < bills2.length; i++) {
+    const tip = calcTip(bills2[i]);
+    tips2.push(tip);
+    total2.push(tip + bills2[i]);
+};
+
+console.log(tips2, total2);
+
+const calcAverage2 = function (arr) {
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+        sum += arr[i];
+    }
+    return sum / arr.length
+}
+
+console.log(calcAverage2(total2));

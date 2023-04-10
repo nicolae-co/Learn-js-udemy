@@ -92,16 +92,87 @@ neighbours[neighbours.indexOf('Moldova')] = 'Republic of Moldova';
 
 // Introduction to Objects
 
-const myCountry = {
-    country: 'Romania',
-    capital: 'Bucharest',
-    language: 'romanian',
-    population: 19,
-    neighbours: ['Moldova', 'Bulgaria', 'Ukraina', 'Ungaria', 'Serbia']
-}
+// const myCountry = {
+//     country: 'Romania',
+//     capital: 'Bucharest',
+//     language: 'romanian',
+//     population: 19,
+//     neighbours: ['Moldova', 'Bulgaria', 'Ukraina', 'Ungaria', 'Serbia']
+// }
 
 
 
 // Dot vs. Bracket Notation
 
 //console.log(`${myCountry.country} has ${myCountry.population} million ${myCountry.language}-speaking people, ${myCountry.neighbours.length} neighbouring countries and a capital called ${myCountry.capital}.`)
+
+// Object Methods
+
+const myCountry = {
+    country: 'Romania',
+    capital: 'Bucharest',
+    language: 'romanian',
+    population: 19,
+    neighbours: ['Moldova', 'Bulgaria', 'Ukraina', 'Ungaria', 'Serbia'],
+    describe: function () {
+        console.log(`${this.country} has ${this.population} million ${this.language}-speaking people, ${this.neighbours.length} neighbouring countries and a capital called ${this.capital}.`)
+    },
+    checkIsIsland: function () {
+        this.isIsland;
+        this.neighbours === 0
+            ? this.isIsland = true
+            : this.isIsland = false;
+        // this.isIsland = this.neighbours.lenghts === 0 ? true : false;
+    }
+}
+// myCountry.describe()
+// myCountry.checkIsIsland()
+// console.log(myCountry)
+
+
+// Iteration: The for Loop
+
+for (let i = 1; i <= 50; i++) {
+    //console.log(`Voter number ${i} is currently voting`);
+}
+
+// Looping Arrays, Breaking and Continuing
+
+const populations2 = [34, 65, 76, 87];
+const percentages2 = [];
+
+for (let i = 0; i < populations2.length; i++) {
+    percentages2.push(percentageOfWorld1(populations2[i]));
+}
+//console.log(percentages2);
+
+// Looping Backwards and Loops is Loops
+
+const listOfNeighbours = [
+    ['Canada', 'Mexico'],
+    ['Spain'],
+    ['Norway', 'Sweden', 'Russia']
+];
+
+for (let i = 0; i < listOfNeighbours.length; i++) {
+    //console.log(listOfNeighbours[i]);
+    for (let j = 0; j < listOfNeighbours[i].length; j++) {
+        //console.log(`Neighbour: ${listOfNeighbours[i][j]}`);
+    }
+}
+
+
+// The while Loop
+
+const percentages3 = [];
+
+let i = 0;
+while (i < populations2.length) {
+    percentages3.push(percentageOfWorld1(populations2[i]));
+    i++;
+}
+
+//console.log(percentages3);
+
+
+
