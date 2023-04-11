@@ -297,7 +297,6 @@ if (23 > 10) {
 
 */
 
-
 // The Conditional (Ternary) Operator
 
 const age = 15;
@@ -305,15 +304,15 @@ const age = 15;
 //     ? console.log('I like to drink wine🍷')
 //     : console.log('I like to drink juice🥤');
 
-const drink = age >= 18 ? 'wine🍷' : 'juice🥤';
-console.log(`1 - I like to drink ${drink}`)
+const drink = age >= 18 ? "wine🍷" : "juice🥤";
+console.log(`1 - I like to drink ${drink}`);
 
 let drink2;
 if (age >= 18) {
-    drink2 = 'wine🍷';
+  drink2 = "wine🍷";
 } else {
-    drink2 = 'juice🥤';
+  drink2 = "juice🥤";
 }
-console.log(`2 - I like to drink ${drink2}`)
+console.log(`2 - I like to drink ${drink2}`);
 
-console.log(`3 - I like to drink ${age >= 18 ? 'wine🍷' : 'juice🥤'}`);
+console.log(`3 - I like to drink ${age >= 18 ? "wine🍷" : "juice🥤"}`);
