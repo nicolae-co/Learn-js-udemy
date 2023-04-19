@@ -265,7 +265,7 @@ const printForecastCourse = function (arr) {
 console.log(printForecastCourse(testData1));
 
 
-*/
+
 // Data Structures, Modern Operators and Strings
 
 // Challenge #1
@@ -480,3 +480,54 @@ for (const flight of flights.split('+')) {
   )})`.padStart(45);
   console.log(output);
 }
+
+*/
+
+// A Closer Look at Functions
+
+// Challenge #1
+
+// 1.
+const poll = {
+  question: 'What is your favourite programming language?',
+  options: ['0: Javascript', '1: Python', '2: Rust', '3: C++'],
+  answers: new Array(4).fill(0),
+  //1.1
+  registerNewAnswer() {
+    // Get answer
+    const answer = Number(
+      prompt(`${this.question}\n${this.options.join('\n')}\n
+    (Write option number)
+    `)
+    );
+    //1.2
+
+    typeof answer === 'number' &&
+      answer < this.answers.length &&
+      this.answers[answer]++;
+    this.displayResults();
+    this.displayResults('string');
+  },
+
+  //3.
+  displayResults(type = 'array') {
+    if (type === 'array') {
+      console.log(this.answers);
+    } else if (type === 'string') {
+      console.log(`Poll result are ${this.answers.join(', ')}`);
+    }
+  },
+};
+
+const answer = poll.registerNewAnswer;
+
+// 2.
+document
+  .querySelector('.poll')
+  .addEventListener('click', poll.registerNewAnswer.bind(poll));
+
+// [5,2,3]
+// [1,5,3,9,6,1]
+
+poll.displayResults.call({ answers: [5, 2, 3] }, 'string');
+poll.displayResults.call({ answers: [1, 5, 3, 9, 6, 1] }, 'string');
