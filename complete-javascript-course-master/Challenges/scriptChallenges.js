@@ -481,7 +481,7 @@ for (const flight of flights.split('+')) {
   console.log(output);
 }
 
-*/
+
 
 // A Closer Look at Functions
 
@@ -531,3 +531,59 @@ document
 
 poll.displayResults.call({ answers: [5, 2, 3] }, 'string');
 poll.displayResults.call({ answers: [1, 5, 3, 9, 6, 1] }, 'string');
+
+
+// Challenge #2
+
+(function () {
+  const header = document.querySelector('h1');
+  header.style.color = 'red';
+  document.querySelector('body').addEventListener('click', function () {
+    header.style.color = 'blue';
+  });
+})();
+
+*/
+
+// WORKING WITH ARRAYS
+
+// Challange #1
+const juliaData1 = [3, 5, 2, 12, 7];
+const kateData1 = [4, 1, 15, 8, 3];
+
+const juliaData2 = [9, 16, 6, 8, 3];
+const kateData2 = [10, 5, 6, 1, 4];
+
+const checkDogs = function (dogsJulia, dogsKate) {
+  const copyDogJulia = dogsJulia;
+  const correctDogJulia = copyDogJulia.slice(1, -2);
+  const finalDogCount = correctDogJulia.concat(dogsKate);
+  finalDogCount.forEach((dogAge, i) => {
+    dogAge >= 3
+      ? console.log(
+          `Dog number ${i + 1} is an adult, and is ${dogAge} years old`
+        )
+      : console.log(`Dog number ${i + 1} is still a puppy 🐶!`);
+  });
+};
+
+console.log('---TEST DATA 1---');
+checkDogs(juliaData1, kateData1);
+console.log('---TEST DATA 2---');
+checkDogs(juliaData2, kateData2);
+
+// Challenge #2
+const calcAverageHumanAge = function (arr) {
+  const dogAge = arr
+    .map(dog => (dog <= 2 ? dog * 2 : dog * 4 + 16))
+    .filter(dog => dog >= 18);
+  // const dogAvgAge = dogAge.reduce((acc, cur) => acc + cur, 0) / dogAge.length;
+  // console.log(dogAvgAge);
+  const dogAvgAge = dogAge.reduce(
+    (acc, cur, i, arr) => acc + cur / arr.length,
+    0
+  );
+  console.log(dogAvgAge);
+};
+calcAverageHumanAge([5, 2, 4, 1, 15, 8, 3]);
+calcAverageHumanAge([16, 6, 10, 5, 6, 1, 4]);
