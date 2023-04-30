@@ -35,12 +35,28 @@
       .poll {
         right: 2rem;
       }
+      .images {
+        display: flex;
+      }
+
+      .images img {
+        display: block;
+        width: 80rem;
+        margin: 4rem;
+      }
+      .images img.parallel {
+        width: 40rem;
+        margin: 2rem;
+        border: 3rem solid white;
+        box-shadow: 0 2rem 5rem 1rem rgba(0, 0, 0, 0.1);
+      }
     </style>
   </head>
 
   <body>
-    <h1>Challenges</h1>
-    <button class="poll">Answer poll ⁉️</button>
+    <!-- <h1>Challenges</h1>
+    <button class="poll">Answer poll ⁉️</button> -->
+    <div class="images"></div>
     <script src="scriptChallenges.js"></script>
   </body>
 </html>
